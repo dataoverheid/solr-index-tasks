@@ -1,0 +1,374 @@
+{
+  "http://standaarden.overheid.nl/owms/terms/De_Nederlandse_Antillen_en_Aruba": [
+    "http://standaarden.overheid.nl/owms/terms/Bestuur",
+    "http://standaarden.overheid.nl/owms/terms/Bestuur|http://standaarden.overheid.nl/owms/terms/De_Nederlandse_Antillen_en_Aruba"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Gemeenten": [
+    "http://standaarden.overheid.nl/owms/terms/Bestuur",
+    "http://standaarden.overheid.nl/owms/terms/Bestuur|http://standaarden.overheid.nl/owms/terms/Gemeenten"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Koninklijk_Huis_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Bestuur",
+    "http://standaarden.overheid.nl/owms/terms/Bestuur|http://standaarden.overheid.nl/owms/terms/Koninklijk_Huis_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Organisatie_en_beleid": [
+    "http://standaarden.overheid.nl/owms/terms/Bestuur",
+    "http://standaarden.overheid.nl/owms/terms/Bestuur|http://standaarden.overheid.nl/owms/terms/Organisatie_en_beleid"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Parlement": [
+    "http://standaarden.overheid.nl/owms/terms/Bestuur",
+    "http://standaarden.overheid.nl/owms/terms/Bestuur|http://standaarden.overheid.nl/owms/terms/Parlement"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Provincies": [
+    "http://standaarden.overheid.nl/owms/terms/Bestuur",
+    "http://standaarden.overheid.nl/owms/terms/Bestuur|http://standaarden.overheid.nl/owms/terms/Provincies"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Rijksoverheid": [
+    "http://standaarden.overheid.nl/owms/terms/Bestuur",
+    "http://standaarden.overheid.nl/owms/terms/Bestuur|http://standaarden.overheid.nl/owms/terms/Rijksoverheid"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Waterschappen": [
+    "http://standaarden.overheid.nl/owms/terms/Bestuur",
+    "http://standaarden.overheid.nl/owms/terms/Bestuur|http://standaarden.overheid.nl/owms/terms/Waterschappen"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Cultuur_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Cultuur_en_recreatie",
+    "http://standaarden.overheid.nl/owms/terms/Cultuur_en_recreatie|http://standaarden.overheid.nl/owms/terms/Cultuur_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Kunst_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Cultuur_en_recreatie",
+    "http://standaarden.overheid.nl/owms/terms/Cultuur_en_recreatie|http://standaarden.overheid.nl/owms/terms/Kunst_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Media": [
+    "http://standaarden.overheid.nl/owms/terms/Cultuur_en_recreatie",
+    "http://standaarden.overheid.nl/owms/terms/Cultuur_en_recreatie|http://standaarden.overheid.nl/owms/terms/Media"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Recreatie_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Cultuur_en_recreatie",
+    "http://standaarden.overheid.nl/owms/terms/Cultuur_en_recreatie|http://standaarden.overheid.nl/owms/terms/Recreatie_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Religie": [
+    "http://standaarden.overheid.nl/owms/terms/Cultuur_en_recreatie",
+    "http://standaarden.overheid.nl/owms/terms/Cultuur_en_recreatie|http://standaarden.overheid.nl/owms/terms/Religie"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Sport_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Cultuur_en_recreatie",
+    "http://standaarden.overheid.nl/owms/terms/Cultuur_en_recreatie|http://standaarden.overheid.nl/owms/terms/Sport_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Bouwnijverheid": [
+    "http://standaarden.overheid.nl/owms/terms/Economie",
+    "http://standaarden.overheid.nl/owms/terms/Economie|http://standaarden.overheid.nl/owms/terms/Bouwnijverheid"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Handel": [
+    "http://standaarden.overheid.nl/owms/terms/Economie",
+    "http://standaarden.overheid.nl/owms/terms/Economie|http://standaarden.overheid.nl/owms/terms/Handel"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/ICT": [
+    "http://standaarden.overheid.nl/owms/terms/Economie",
+    "http://standaarden.overheid.nl/owms/terms/Economie|http://standaarden.overheid.nl/owms/terms/ICT"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Industrie_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Economie",
+    "http://standaarden.overheid.nl/owms/terms/Economie|http://standaarden.overheid.nl/owms/terms/Industrie_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Markttoezicht": [
+    "http://standaarden.overheid.nl/owms/terms/Economie",
+    "http://standaarden.overheid.nl/owms/terms/Economie|http://standaarden.overheid.nl/owms/terms/Markttoezicht"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Ondernemen": [
+    "http://standaarden.overheid.nl/owms/terms/Economie",
+    "http://standaarden.overheid.nl/owms/terms/Economie|http://standaarden.overheid.nl/owms/terms/Ondernemen"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Overige_economische_sectoren": [
+    "http://standaarden.overheid.nl/owms/terms/Economie",
+    "http://standaarden.overheid.nl/owms/terms/Economie|http://standaarden.overheid.nl/owms/terms/Overige_economische_sectoren"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Toerisme": [
+    "http://standaarden.overheid.nl/owms/terms/Economie",
+    "http://standaarden.overheid.nl/owms/terms/Economie|http://standaarden.overheid.nl/owms/terms/Toerisme"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Transport_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Economie",
+    "http://standaarden.overheid.nl/owms/terms/Economie|http://standaarden.overheid.nl/owms/terms/Transport_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Begroting": [
+    "http://standaarden.overheid.nl/owms/terms/Financien",
+    "http://standaarden.overheid.nl/owms/terms/Financien|http://standaarden.overheid.nl/owms/terms/Begroting"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Belasting": [
+    "http://standaarden.overheid.nl/owms/terms/Financien",
+    "http://standaarden.overheid.nl/owms/terms/Financien|http://standaarden.overheid.nl/owms/terms/Belasting"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Financieel_toezicht": [
+    "http://standaarden.overheid.nl/owms/terms/Financien",
+    "http://standaarden.overheid.nl/owms/terms/Financien|http://standaarden.overheid.nl/owms/terms/Financieel_toezicht"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Inkomensbeleid": [
+    "http://standaarden.overheid.nl/owms/terms/Financien",
+    "http://standaarden.overheid.nl/owms/terms/Financien|http://standaarden.overheid.nl/owms/terms/Inkomensbeleid"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Bouwen_en_verbouwen": [
+    "http://standaarden.overheid.nl/owms/terms/Huisvesting_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Huisvesting_(thema)|http://standaarden.overheid.nl/owms/terms/Bouwen_en_verbouwen"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Huren_en_verhuren": [
+    "http://standaarden.overheid.nl/owms/terms/Huisvesting_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Huisvesting_(thema)|http://standaarden.overheid.nl/owms/terms/Huren_en_verhuren"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Kopen_en_verkopen": [
+    "http://standaarden.overheid.nl/owms/terms/Huisvesting_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Huisvesting_(thema)|http://standaarden.overheid.nl/owms/terms/Kopen_en_verkopen"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Defensie_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Internationaal",
+    "http://standaarden.overheid.nl/owms/terms/Internationaal|http://standaarden.overheid.nl/owms/terms/Defensie_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Europese_zaken": [
+    "http://standaarden.overheid.nl/owms/terms/Internationaal",
+    "http://standaarden.overheid.nl/owms/terms/Internationaal|http://standaarden.overheid.nl/owms/terms/Europese_zaken"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Internationale_samenwerking_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Internationaal",
+    "http://standaarden.overheid.nl/owms/terms/Internationaal|http://standaarden.overheid.nl/owms/terms/Internationale_samenwerking_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Militaire_missies": [
+    "http://standaarden.overheid.nl/owms/terms/Internationaal",
+    "http://standaarden.overheid.nl/owms/terms/Internationaal|http://standaarden.overheid.nl/owms/terms/Militaire_missies"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Ontwikkelingssamenwerking": [
+    "http://standaarden.overheid.nl/owms/terms/Internationaal",
+    "http://standaarden.overheid.nl/owms/terms/Internationaal|http://standaarden.overheid.nl/owms/terms/Ontwikkelingssamenwerking"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Reizen": [
+    "http://standaarden.overheid.nl/owms/terms/Internationaal",
+    "http://standaarden.overheid.nl/owms/terms/Internationaal|http://standaarden.overheid.nl/owms/terms/Reizen"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Dieren_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Landbouw_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Landbouw_(thema)|http://standaarden.overheid.nl/owms/terms/Dieren_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Planten": [
+    "http://standaarden.overheid.nl/owms/terms/Landbouw_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Landbouw_(thema)|http://standaarden.overheid.nl/owms/terms/Planten"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Voedselkwaliteit": [
+    "http://standaarden.overheid.nl/owms/terms/Landbouw_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Landbouw_(thema)|http://standaarden.overheid.nl/owms/terms/Voedselkwaliteit"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Emigratie_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Migratie_en_integratie",
+    "http://standaarden.overheid.nl/owms/terms/Migratie_en_integratie|http://standaarden.overheid.nl/owms/terms/Emigratie_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Immigratie_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Migratie_en_integratie",
+    "http://standaarden.overheid.nl/owms/terms/Migratie_en_integratie|http://standaarden.overheid.nl/owms/terms/Immigratie_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Integratie_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Migratie_en_integratie",
+    "http://standaarden.overheid.nl/owms/terms/Migratie_en_integratie|http://standaarden.overheid.nl/owms/terms/Integratie_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Nederlanderschap_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Migratie_en_integratie",
+    "http://standaarden.overheid.nl/owms/terms/Migratie_en_integratie|http://standaarden.overheid.nl/owms/terms/Nederlanderschap_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Tijdelijk_verblijf": [
+    "http://standaarden.overheid.nl/owms/terms/Migratie_en_integratie",
+    "http://standaarden.overheid.nl/owms/terms/Migratie_en_integratie|http://standaarden.overheid.nl/owms/terms/Tijdelijk_verblijf"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Afval_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Natuur_en_milieu",
+    "http://standaarden.overheid.nl/owms/terms/Natuur_en_milieu|http://standaarden.overheid.nl/owms/terms/Afval_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Bodem": [
+    "http://standaarden.overheid.nl/owms/terms/Natuur_en_milieu",
+    "http://standaarden.overheid.nl/owms/terms/Natuur_en_milieu|http://standaarden.overheid.nl/owms/terms/Bodem"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Energie": [
+    "http://standaarden.overheid.nl/owms/terms/Natuur_en_milieu",
+    "http://standaarden.overheid.nl/owms/terms/Natuur_en_milieu|http://standaarden.overheid.nl/owms/terms/Energie"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Geluid_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Natuur_en_milieu",
+    "http://standaarden.overheid.nl/owms/terms/Natuur_en_milieu|http://standaarden.overheid.nl/owms/terms/Geluid_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Lucht": [
+    "http://standaarden.overheid.nl/owms/terms/Natuur_en_milieu",
+    "http://standaarden.overheid.nl/owms/terms/Natuur_en_milieu|http://standaarden.overheid.nl/owms/terms/Lucht"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Natuur-_en_landschapsbeheer": [
+    "http://standaarden.overheid.nl/owms/terms/Natuur_en_milieu",
+    "http://standaarden.overheid.nl/owms/terms/Natuur_en_milieu|http://standaarden.overheid.nl/owms/terms/Natuur-_en_landschapsbeheer"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Stoffen": [
+    "http://standaarden.overheid.nl/owms/terms/Natuur_en_milieu",
+    "http://standaarden.overheid.nl/owms/terms/Natuur_en_milieu|http://standaarden.overheid.nl/owms/terms/Stoffen"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Basisonderwijs_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Onderwijs_en_wetenschap",
+    "http://standaarden.overheid.nl/owms/terms/Onderwijs_en_wetenschap|http://standaarden.overheid.nl/owms/terms/Basisonderwijs_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Beroepsonderwijs_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Onderwijs_en_wetenschap",
+    "http://standaarden.overheid.nl/owms/terms/Onderwijs_en_wetenschap|http://standaarden.overheid.nl/owms/terms/Beroepsonderwijs_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Hoger_onderwijs_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Onderwijs_en_wetenschap",
+    "http://standaarden.overheid.nl/owms/terms/Onderwijs_en_wetenschap|http://standaarden.overheid.nl/owms/terms/Hoger_onderwijs_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Onderzoek_en_wetenschap": [
+    "http://standaarden.overheid.nl/owms/terms/Onderwijs_en_wetenschap",
+    "http://standaarden.overheid.nl/owms/terms/Onderwijs_en_wetenschap|http://standaarden.overheid.nl/owms/terms/Onderzoek_en_wetenschap"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Overige_vormen_van_onderwijs": [
+    "http://standaarden.overheid.nl/owms/terms/Onderwijs_en_wetenschap",
+    "http://standaarden.overheid.nl/owms/terms/Onderwijs_en_wetenschap|http://standaarden.overheid.nl/owms/terms/Overige_vormen_van_onderwijs"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Voortgezet_onderwijs_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Onderwijs_en_wetenschap",
+    "http://standaarden.overheid.nl/owms/terms/Onderwijs_en_wetenschap|http://standaarden.overheid.nl/owms/terms/Voortgezet_onderwijs_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Criminaliteit": [
+    "http://standaarden.overheid.nl/owms/terms/Openbare_orde_en_veiligheid",
+    "http://standaarden.overheid.nl/owms/terms/Openbare_orde_en_veiligheid|http://standaarden.overheid.nl/owms/terms/Criminaliteit"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Politie_brandweer_en_hulpdiensten": [
+    "http://standaarden.overheid.nl/owms/terms/Openbare_orde_en_veiligheid",
+    "http://standaarden.overheid.nl/owms/terms/Openbare_orde_en_veiligheid|http://standaarden.overheid.nl/owms/terms/Politie_brandweer_en_hulpdiensten"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Rampen": [
+    "http://standaarden.overheid.nl/owms/terms/Openbare_orde_en_veiligheid",
+    "http://standaarden.overheid.nl/owms/terms/Openbare_orde_en_veiligheid|http://standaarden.overheid.nl/owms/terms/Rampen"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Staatsveiligheid": [
+    "http://standaarden.overheid.nl/owms/terms/Openbare_orde_en_veiligheid",
+    "http://standaarden.overheid.nl/owms/terms/Openbare_orde_en_veiligheid|http://standaarden.overheid.nl/owms/terms/Staatsveiligheid"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Terrorisme_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Openbare_orde_en_veiligheid",
+    "http://standaarden.overheid.nl/owms/terms/Openbare_orde_en_veiligheid|http://standaarden.overheid.nl/owms/terms/Terrorisme_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Bestuursrecht": [
+    "http://standaarden.overheid.nl/owms/terms/Recht_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Recht_(thema)|http://standaarden.overheid.nl/owms/terms/Bestuursrecht"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Bezwaar_en_klachten": [
+    "http://standaarden.overheid.nl/owms/terms/Recht_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Recht_(thema)|http://standaarden.overheid.nl/owms/terms/Bezwaar_en_klachten"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Burgerlijk_recht": [
+    "http://standaarden.overheid.nl/owms/terms/Recht_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Recht_(thema)|http://standaarden.overheid.nl/owms/terms/Burgerlijk_recht"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Rechtspraak": [
+    "http://standaarden.overheid.nl/owms/terms/Recht_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Recht_(thema)|http://standaarden.overheid.nl/owms/terms/Rechtspraak"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Staatsrecht": [
+    "http://standaarden.overheid.nl/owms/terms/Recht_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Recht_(thema)|http://standaarden.overheid.nl/owms/terms/Staatsrecht"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Strafrecht": [
+    "http://standaarden.overheid.nl/owms/terms/Recht_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Recht_(thema)|http://standaarden.overheid.nl/owms/terms/Strafrecht"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Netwerken": [
+    "http://standaarden.overheid.nl/owms/terms/Ruimte_en_infrastructuur",
+    "http://standaarden.overheid.nl/owms/terms/Ruimte_en_infrastructuur|http://standaarden.overheid.nl/owms/terms/Netwerken"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Ruimtelijke_ordening": [
+    "http://standaarden.overheid.nl/owms/terms/Ruimte_en_infrastructuur",
+    "http://standaarden.overheid.nl/owms/terms/Ruimte_en_infrastructuur|http://standaarden.overheid.nl/owms/terms/Ruimtelijke_ordening"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Waterkeringen_en_waterbeheer": [
+    "http://standaarden.overheid.nl/owms/terms/Ruimte_en_infrastructuur",
+    "http://standaarden.overheid.nl/owms/terms/Ruimte_en_infrastructuur|http://standaarden.overheid.nl/owms/terms/Waterkeringen_en_waterbeheer"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Gezin_en_kinderen": [
+    "http://standaarden.overheid.nl/owms/terms/Sociale_zekerheid",
+    "http://standaarden.overheid.nl/owms/terms/Sociale_zekerheid|http://standaarden.overheid.nl/owms/terms/Gezin_en_kinderen"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Jongeren_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Sociale_zekerheid",
+    "http://standaarden.overheid.nl/owms/terms/Sociale_zekerheid|http://standaarden.overheid.nl/owms/terms/Jongeren_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Nabestaanden": [
+    "http://standaarden.overheid.nl/owms/terms/Sociale_zekerheid",
+    "http://standaarden.overheid.nl/owms/terms/Sociale_zekerheid|http://standaarden.overheid.nl/owms/terms/Nabestaanden"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Ouderen": [
+    "http://standaarden.overheid.nl/owms/terms/Sociale_zekerheid",
+    "http://standaarden.overheid.nl/owms/terms/Sociale_zekerheid|http://standaarden.overheid.nl/owms/terms/Ouderen"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Werkloosheid": [
+    "http://standaarden.overheid.nl/owms/terms/Sociale_zekerheid",
+    "http://standaarden.overheid.nl/owms/terms/Sociale_zekerheid|http://standaarden.overheid.nl/owms/terms/Werkloosheid"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Ziekte_en_arbeidsongeschiktheid": [
+    "http://standaarden.overheid.nl/owms/terms/Sociale_zekerheid",
+    "http://standaarden.overheid.nl/owms/terms/Sociale_zekerheid|http://standaarden.overheid.nl/owms/terms/Ziekte_en_arbeidsongeschiktheid"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Luchtvaart": [
+    "http://standaarden.overheid.nl/owms/terms/Verkeer_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Verkeer_(thema)|http://standaarden.overheid.nl/owms/terms/Luchtvaart"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Spoor": [
+    "http://standaarden.overheid.nl/owms/terms/Verkeer_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Verkeer_(thema)|http://standaarden.overheid.nl/owms/terms/Spoor"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Water_(verkeer-thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Verkeer_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Verkeer_(thema)|http://standaarden.overheid.nl/owms/terms/Water_(verkeer-thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Weg_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Verkeer_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Verkeer_(thema)|http://standaarden.overheid.nl/owms/terms/Weg_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Arbeidsomstandigheden_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Werk_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Werk_(thema)|http://standaarden.overheid.nl/owms/terms/Arbeidsomstandigheden_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Arbeidsvoorwaarden": [
+    "http://standaarden.overheid.nl/owms/terms/Werk_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Werk_(thema)|http://standaarden.overheid.nl/owms/terms/Arbeidsvoorwaarden"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Levensloop": [
+    "http://standaarden.overheid.nl/owms/terms/Werk_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Werk_(thema)|http://standaarden.overheid.nl/owms/terms/Levensloop"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Ontslag_(thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Werk_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Werk_(thema)|http://standaarden.overheid.nl/owms/terms/Ontslag_(thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Werkgelegenheid": [
+    "http://standaarden.overheid.nl/owms/terms/Werk_(thema)",
+    "http://standaarden.overheid.nl/owms/terms/Werk_(thema)|http://standaarden.overheid.nl/owms/terms/Werkgelegenheid"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Ethiek": [
+    "http://standaarden.overheid.nl/owms/terms/Zorg_en_gezondheid",
+    "http://standaarden.overheid.nl/owms/terms/Zorg_en_gezondheid|http://standaarden.overheid.nl/owms/terms/Ethiek"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Geneesmiddelen_en_medische_hulpmiddelen": [
+    "http://standaarden.overheid.nl/owms/terms/Zorg_en_gezondheid",
+    "http://standaarden.overheid.nl/owms/terms/Zorg_en_gezondheid|http://standaarden.overheid.nl/owms/terms/Geneesmiddelen_en_medische_hulpmiddelen"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Gezondheidsrisico's": [
+    "http://standaarden.overheid.nl/owms/terms/Zorg_en_gezondheid",
+    "http://standaarden.overheid.nl/owms/terms/Zorg_en_gezondheid|http://standaarden.overheid.nl/owms/terms/Gezondheidsrisico's"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Jongeren_(gezondheid-thema)": [
+    "http://standaarden.overheid.nl/owms/terms/Zorg_en_gezondheid",
+    "http://standaarden.overheid.nl/owms/terms/Zorg_en_gezondheid|http://standaarden.overheid.nl/owms/terms/Jongeren_(gezondheid-thema)"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Verzekeringen": [
+    "http://standaarden.overheid.nl/owms/terms/Zorg_en_gezondheid",
+    "http://standaarden.overheid.nl/owms/terms/Zorg_en_gezondheid|http://standaarden.overheid.nl/owms/terms/Verzekeringen"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Voeding": [
+    "http://standaarden.overheid.nl/owms/terms/Zorg_en_gezondheid",
+    "http://standaarden.overheid.nl/owms/terms/Zorg_en_gezondheid|http://standaarden.overheid.nl/owms/terms/Voeding"
+  ],
+  "http://standaarden.overheid.nl/owms/terms/Ziekten_en_behandelingen": [
+    "http://standaarden.overheid.nl/owms/terms/Zorg_en_gezondheid",
+    "http://standaarden.overheid.nl/owms/terms/Zorg_en_gezondheid|http://standaarden.overheid.nl/owms/terms/Ziekten_en_behandelingen"
+  ]
+}

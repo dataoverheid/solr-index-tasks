@@ -1,0 +1,27 @@
+# IDE
+/.idea/*
+
+# Python
+/venv/*
+__pycache__/
+*.py[cod]
+env/*
+build/*
+develop-eggs/*
+dist/*
+sdist/*
+*.egg-info/*
+.installed.cfg
+*.egg
+pip-log.txt
+pip-delete-this-directory.txt
+*.manifest
+*.spec
+
+# Generated files
+/lists/*
+/log/*
+/.env
+
+# Git
+!.gitkeep

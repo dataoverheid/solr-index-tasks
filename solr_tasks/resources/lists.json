@@ -1,0 +1,86 @@
+{
+  "vocabularies": {
+    "ADMS:Changetype": {
+      "local": "adms_changetype.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/adms_changetype.json"
+    },
+    "ADMS:DistributieStatus": {
+      "local": "adms_distributiestatus.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/adms_distributiestatus.json"
+    },
+    "CKAN:License": {
+      "local": "ckan_license.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/ckan_license.json"
+    },
+    "DONL:Catalogs": {
+      "local": "donl_catalogs.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/donl_catalogs.json"
+    },
+    "DONL:DistributionType": {
+      "local": "donl_distributiontype.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/donl_distributiontype.json"
+    },
+    "DONL:Language": {
+      "local": "donl_language.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/donl_language.json"
+    },
+    "DONL:License": {
+      "local": "donl_license.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/donl_license.json"
+    },
+    "DONL:Organization": {
+      "local": "donl_organization.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/donl_organization.json"
+    },
+    "IANA:Mediatypes": {
+      "local": "iana_mediatypes.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/iana_mediatypes.json"
+    },
+    "MDR:FiletypeNAL": {
+      "local": "mdr_filetype_nal.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/mdr_filetype_nal.json"
+    },
+    "Overheid:DatasetStatus": {
+      "local": "overheid_dataset_status.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/overheid_dataset_status.json"
+    },
+    "Overheid:Frequency": {
+      "local": "overheid_frequency.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/overheid_frequency.json"
+    },
+    "Overheid:Openbaarheidsniveau": {
+      "local": "overheid_openbaarheidsniveau.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/overheid_openbaarheidsniveau.json"
+    },
+    "Overheid:SpatialScheme": {
+      "local": "overheid_spatial_scheme.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/overheid_spatial_scheme.json"
+    },
+    "Overheid:SpatialGemeente": {
+      "local": "overheid_spatial_gemeente.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/overheid_spatial_gemeente.json"
+    },
+    "Overheid:SpatialKoninkrijksdeel": {
+      "local": "overheid_spatial_koninkrijksdeel.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/overheid_spatial_koninkrijksdeel.json"
+    },
+    "Overheid:SpatialProvincie": {
+      "local": "overheid_spatial_provincie.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/overheid_spatial_provincie.json"
+    },
+    "Overheid:SpatialWaterschap": {
+      "local": "overheid_spatial_waterschap.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/overheid_spatial_waterschap.json"
+    },
+    "Overheid:Taxonomiebeleidsagenda": {
+      "local": "overheid_taxonomiebeleidsagenda.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/overheid_taxonomiebeleidsagenda.json"
+    }
+  },
+  "taxonomies": {
+    "DONL:Communities": {
+      "local": "donl_communities.json",
+      "online": "https://data.overheid.nl/service/waardelijsten/donl_communities"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "appliance": {
+    "community": "relation_appliance",
+    "dataset": "relation_dataset"
+  },
+  "community": {
+    "appliance": "relation_community",
+    "dataset": "relation_community",
+    "datarequest": "relation_community",
+    "group": "relation_community",
+    "organization": "relation_community"
+  },
+  "datarequest": {
+    "community": "relation_datarequest",
+    "dataset": "relation_datarequest",
+    "organization": "relation_datarequest"
+  },
+  "organization": {
+    "community": "relation_organization",
+    "dataset": "authority",
+    "datarequest": "authority"
+  }
+}

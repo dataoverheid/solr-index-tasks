@@ -1,0 +1,75 @@
+{
+  "https://data.overheid.nl/communities/ministerie-van-infrastructuur-en-waterstaat": {
+    "rules": {
+      "authority": [
+        "http://standaarden.overheid.nl/owms/terms/minienw",
+        "http://standaarden.overheid.nl/owms/terms/Rijkswaterstaat",
+        "http://standaarden.overheid.nl/owms/terms/Inspectie_Leefomgeving_en_Transport",
+        "http://standaarden.overheid.nl/owms/terms/pbl",
+        "http://standaarden.overheid.nl/owms/terms/Koninklijk_Nederlands_Meteorologisch_Instituut",
+        "http://standaarden.overheid.nl/owms/terms/RDW_(Dienst_Wegverkeer)",
+        "http://standaarden.overheid.nl/owms/terms/CBR",
+        "http://data.overheid.nl/organisatie/prorail"
+      ]
+    }
+  },
+  "https://data.overheid.nl/communities/mobiliteit": {
+    "rules": {
+      "theme": [
+        "http://standaarden.overheid.nl/owms/terms/Verkeer_(thema)",
+        "http://standaarden.overheid.nl/owms/terms/Spoor",
+        "http://standaarden.overheid.nl/owms/terms/Weg_(thema)",
+        "http://standaarden.overheid.nl/owms/terms/Luchtvaart"
+      ]
+    }
+  },
+  "https://data.overheid.nl/communities/onderwijs": {
+    "rules": {
+      "authority": [
+        "http://standaarden.overheid.nl/owms/terms/Ministerie_van_Onderwijs,_Cultuur_en_Wetenschap",
+        "http://standaarden.overheid.nl/owms/terms/Dienst_Uitvoering_Onderwijs",
+        "http://standaarden.overheid.nl/owms/terms/Inspectie_van_het_Onderwijs",
+        "http://standaarden.overheid.nl/owms/terms/sbb"
+      ],
+      "theme": [
+        "http://standaarden.overheid.nl/owms/terms/Onderwijs_en_wetenschap",
+        "http://standaarden.overheid.nl/owms/terms/Onderzoek_en_wetenschap",
+        "http://standaarden.overheid.nl/owms/terms/Basisonderwijs_(thema)",
+        "http://standaarden.overheid.nl/owms/terms/Hoger_onderwijs_(thema)",
+        "http://standaarden.overheid.nl/owms/terms/Voortgezet_onderwijs_(thema)",
+        "http://standaarden.overheid.nl/owms/terms/Beroepsonderwijs_(thema)"
+      ]
+    }
+  },
+  "https://data.overheid.nl/communities/basisregistraties": {
+    "rules": {
+      "classification": ["basis_register"]
+    }
+  },
+  "https://data.overheid.nl/communities/open-data-migratieketen": {
+    "rules": {
+      "theme": [
+        "http://standaarden.overheid.nl/owms/terms/Immigratie_(thema)"
+      ]
+    }
+  },
+  "https://data.overheid.nl/communities/corona": {
+    "rules": {
+      "keyword": [
+        "corona"
+      ]
+    }
+  },
+  "https://data.overheid.nl/communities/dataregister-minszw": {
+    "rules": {
+      "authority": [
+        "http://standaarden.overheid.nl/owms/terms/Ministerie_van_Sociale_Zaken_en_Werkgelegenheid",
+        "http://standaarden.overheid.nl/owms/terms/Uitvoeringsinstituut_Werknemersverzekeringen",
+        "http://standaarden.overheid.nl/owms/terms/Sociale_Verzekeringsbank"
+      ],
+      "catalog": [
+        "https://www.rijksoverheid.nl/ministeries/ministerie-van-sociale-zaken-en-werkgelegenheid"
+      ]
+    }
+  }
+}

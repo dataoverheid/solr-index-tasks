@@ -1,0 +1,24 @@
+# IDE
+/.idea/*
+
+# VCS
+/.git/*
+/.gitattributes
+/.gitignore
+
+# Docker
+/bin/docker_build.sh
+/.dockerignore
+/Dockerfile
+
+# Testing
+/.editorconfig
+
+# Documentation
+/CHANGELOG.md
+/CONTRIBUTING.md
+/LICENSE.md
+
+# Generated files
+/.env
+/.env.dist

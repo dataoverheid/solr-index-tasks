@@ -1,0 +1,54 @@
+{
+  "appliance": {
+    "community": {
+      "from": "relation_appliance",
+      "match": "sys_uri",
+      "to": "relation_community"
+    }
+  },
+  "community": {
+    "dataset": {
+      "from": "relation_community",
+      "match": "sys_uri",
+      "to": "relation_dataset"
+    }
+  },
+  "dataset": {
+    "appliance": {
+      "from": "relation_dataset",
+      "match": "sys_uri",
+      "to": "relation_appliance"
+    },
+    "group": {
+      "from": "relation_dataset",
+      "match": "sys_uri",
+      "to": "relation_group"
+    }
+  },
+  "datarequest": {
+    "community": {
+      "from": "relation_datarequest",
+      "match": "sys_uri",
+      "to": "relation_community"
+    }
+  },
+  "group": {
+    "community": {
+      "from": "relation_group",
+      "match": "sys_uri",
+      "to": "relation_community"
+    }
+  },
+  "organization": {
+    "community": {
+      "from": "relation_organization",
+      "match": "sys_uri",
+      "to": "relation_community"
+    },
+    "dataset": {
+      "from": "authority",
+      "match": "sys_uri",
+      "to": "relation_dataset"
+    }
+  }
+}

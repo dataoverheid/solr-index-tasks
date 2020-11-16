@@ -1,0 +1,193 @@
+{
+  "id": [
+    "sys_id"
+  ],
+  "name": [
+    "sys_name"
+  ],
+  "metadata_language": [
+    "sys_language"
+  ],
+  "language": [
+    "language"
+  ],
+  "metadata_created": [
+    "sys_created"
+  ],
+  "metadata_modified": [
+    "sys_modified"
+  ],
+  "identifier": [
+    "sys_uri"
+  ],
+  "title": [
+    "title"
+  ],
+  "notes": [
+    "description"
+  ],
+  "tags": [
+    "keyword"
+  ],
+  "theme": [
+    "theme"
+  ],
+  "modified": [
+    "text"
+  ],
+  "authority": [
+    "authority",
+    "relation_organization"
+  ],
+  "publisher": [
+    "publisher",
+    "relation_organization"
+  ],
+  "source_catalog": [
+    "relation_catalog"
+  ],
+  "contact_point_name": [
+    "contact_point"
+  ],
+  "contact_point_title": [
+    "contact_point"
+  ],
+  "contact_point_address": [
+    "contact_point"
+  ],
+  "contact_point_email": [
+    "contact_point"
+  ],
+  "contact_point_website": [
+    "contact_point"
+  ],
+  "contact_point_phone": [
+    "contact_point"
+  ],
+  "access_rights": [
+    "access_rights"
+  ],
+  "dataset_status": [
+    "status"
+  ],
+  "url": [
+    "url"
+  ],
+  "spatial_scheme": [
+    "spatial"
+  ],
+  "spatial_value": [
+    "spatial"
+  ],
+  "temporal_label": [
+    "temporal_label"
+  ],
+  "temporal_start": [
+    "temporal"
+  ],
+  "temporal_end": [
+    "temporal"
+  ],
+  "conforms_to": [
+    "url"
+  ],
+  "alternate_identifier": [
+    "url"
+  ],
+  "related_resource": [
+    "url"
+  ],
+  "source": [
+    "url"
+  ],
+  "has_version": [
+    "url"
+  ],
+  "is_version_of": [
+    "url"
+  ],
+  "version": [
+    "text"
+  ],
+  "version_notes": [
+    "text"
+  ],
+  "legal_foundation_uri": [
+    "legal"
+  ],
+  "legal_foundation_ref": [
+    "legal"
+  ],
+  "legal_foundation_label": [
+    "legal"
+  ],
+  "date_planned": [
+    "dates"
+  ],
+  "documentation": [
+    "url"
+  ],
+  "frequency": [
+    "frequency"
+  ],
+  "license_id": [
+    "license"
+  ],
+  "provenance": [
+    "url"
+  ],
+  "sample": [
+    "url"
+  ],
+  "high_value": [
+    "classification"
+  ],
+  "basis_register": [
+    "classification"
+  ],
+  "referentie_data": [
+    "classification"
+  ],
+  "national_coverage": [
+    "classification"
+  ],
+  "sector_registrations": [
+    "classification"
+  ],
+  "local_registrations": [
+    "classification"
+  ],
+  "download_url": [
+    "url"
+  ],
+  "res_format": [
+    "format"
+  ],
+  "release_date": [
+    "dates"
+  ],
+  "modification_date": [
+    "dates"
+  ],
+  "size": [
+    "size"
+  ],
+  "media_type": [
+    "mediatype"
+  ],
+  "linked_schemas": [
+    "url"
+  ],
+  "hash": [
+    "checksum"
+  ],
+  "hash_algorithm": [
+    "checksum"
+  ],
+  "description": [
+    "text"
+  ],
+  "rights": [
+    "text"
+  ]
+}
