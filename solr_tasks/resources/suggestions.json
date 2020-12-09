@@ -1,0 +1,204 @@
+{
+  "dataset": {
+    "mapping": {
+      "title": [
+        "dataset"
+      ],
+      "sys_type": [
+        "type"
+      ],
+      "sys_name": [
+        "payload"
+      ],
+      "sys_modified": [
+        "weight"
+      ],
+      "sys_created": [
+        "weight"
+      ]
+    },
+    "relations": [
+      "organization"
+    ]
+  },
+  "dataservice": {
+    "mapping": {
+      "title": [
+        "dataservice"
+      ],
+      "sys_type": [
+        "type"
+      ],
+      "sys_name": [
+        "payload"
+      ],
+      "sys_modified": [
+        "weight"
+      ],
+      "sys_created": [
+        "weight"
+      ]
+    },
+    "relations": []
+  },
+  "organization": {
+    "mapping": {
+      "title": [
+        "organization"
+      ],
+      "sys_type": [
+        "type"
+      ],
+      "sys_name": [
+        "payload"
+      ],
+      "sys_modified": [
+        "weight"
+      ],
+      "sys_created": [
+        "weight"
+      ]
+    },
+    "relations": []
+  },
+  "datarequest": {
+    "mapping": {
+      "title": [
+        "datarequest"
+      ],
+      "sys_type": [
+        "type"
+      ],
+      "sys_name": [
+        "payload"
+      ],
+      "sys_modified": [
+        "weight"
+      ],
+      "sys_created": [
+        "weight"
+      ]
+    },
+    "relations": []
+  },
+  "support": {
+    "mapping": {
+      "title": [
+        "support"
+      ],
+      "sys_type": [
+        "type"
+      ],
+      "sys_name": [
+        "payload"
+      ],
+      "sys_modified": [
+        "weight"
+      ],
+      "sys_created": [
+        "weight"
+      ]
+    },
+    "relations": []
+  },
+  "appliance": {
+    "mapping": {
+      "title": [
+        "appliance"
+      ],
+      "sys_type": [
+        "type"
+      ],
+      "sys_name": [
+        "payload"
+      ],
+      "sys_modified": [
+        "weight"
+      ],
+      "sys_created": [
+        "weight"
+      ]
+    },
+    "relations": []
+  },
+  "news": {
+    "mapping": {
+      "title": [
+        "news"
+      ],
+      "sys_type": [
+        "type"
+      ],
+      "sys_name": [
+        "payload"
+      ],
+      "sys_modified": [
+        "weight"
+      ],
+      "sys_created": [
+        "weight"
+      ]
+    },
+    "relations": []
+  },
+  "catalog": {
+    "mapping": {
+      "title": [
+        "catalog"
+      ],
+      "sys_type": [
+        "type"
+      ],
+      "sys_name": [
+        "payload"
+      ],
+      "sys_modified": [
+        "weight"
+      ],
+      "sys_created": [
+        "weight"
+      ]
+    },
+    "relations": []
+  },
+  "community": {
+    "mapping": {
+      "title": [
+        "community"
+      ],
+      "sys_type": [
+        "type"
+      ],
+      "sys_name": [
+        "payload"
+      ],
+      "sys_modified": [
+        "weight"
+      ],
+      "sys_created": [
+        "weight"
+      ]
+    },
+    "relations": []
+  },
+  "group": {
+    "mapping": {
+      "title": [
+        "group"
+      ],
+      "sys_type": [
+        "type"
+      ],
+      "sys_name": [
+        "payload"
+      ],
+      "sys_modified": [
+        "weight"
+      ],
+      "sys_created": [
+        "weight"
+      ]
+    },
+    "relations": []
+  }
+}

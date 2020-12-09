@@ -8,8 +8,7 @@ import requests
 import sys
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
-from typing import Union
-
+from typing import Union, Any, Dict
 
 root = os.path.join(os.path.dirname(__file__), '..', '..')
 
@@ -47,7 +46,7 @@ def setup_logger(caller: str) -> None:
     _enable_bugsnag_logger(formatter)
 
 
-def load_resource(resource_name: str) -> Union[dict, list]:
+def load_resource(resource_name: str) -> Union[dict, Dict[Any, dict], list]:
     """
     Loads a given JSON resource from `solr_tasks/resources`.
 
