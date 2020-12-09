@@ -6,7 +6,7 @@ import logging
 import os
 import dateutil.parser as date_parser
 from solr_tasks.lib import utils
-from solr_tasks.lib.mapper import DatasetMapper
+from solr_tasks.lib.mapper import DictMapper
 from solr_tasks.lib.solr import SolrCollection
 
 
@@ -23,7 +23,7 @@ def determine_dataset_mutations(solr_dataset: SolrCollection,
                                                      id_field='sys_id')
     logging.info('solr datasets: %s', len(solr_datasets))
 
-    mapper = DatasetMapper(mappings, {'sys_type': 'dataset'})
+    mapper = DictMapper(mappings, {'sys_type': 'dataset'})
     ckan_datasets = {dataset['id']: mapper.apply_map(dataset)
                      for dataset in ckan_datasets}
     solr_datasets = {dataset['sys_id']: dataset for dataset in solr_datasets}
@@ -56,6 +56,13 @@ def determine_datasets_to_update(delta: bool,
             continue
 
         ckan_dataset = ckan_datasets[key]
+
+        for solr_key, values in dataset.items():
+            if not solr_key.startswith('relation_'):
+                continue
+
+            if solr_key not in ckan_dataset:
+                ckan_dataset[solr_key] = values
 
         if delta is False:
             datasets_to_update[key] = ckan_dataset
@@ -118,9 +125,6 @@ def update_dataset_with_communities(dataset: dict,
 
             if any([v in config['rules'][field] for v in field_value]):
                 dataset_communities.add(uri)
-
-    if set(dataset['relation_community']) == dataset_communities:
-        return dataset
 
     logging.info('Found {0} communities for dataset {1}'.format(
         len(dataset_communities), dataset['sys_uri'][0])

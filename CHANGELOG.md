@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.6.1 (2020/12)
+
+- Ensured that generated Solr fields are not overwritten during collection synchronization.
+
+## 0.6.0 (2020/12)
+
+- Index dataservice suggestions.
+
+## 0.5.0 (2020/11)
+
+- Updated the generation of Solr suggestions to include all content-types rather than just generating dataset related suggestions.
+- Renamed `DatasetMapper` so that it can logically be reused in a non-dataset context.
+
 ## 0.4.5 (2020/10)
 
 - Configured retry policy for HTTP requests based on the `HTTP_RETRY` environment variable.
