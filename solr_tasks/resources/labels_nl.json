@@ -1,0 +1,50 @@
+{
+  "basis_register": [
+    "Basis",
+    "Registratie",
+    "BAG",
+    "BGT",
+    "BRI",
+    "BRK",
+    "BRO",
+    "BRP",
+    "BRT",
+    "BRV",
+    "WOZ",
+    "HR",
+    "Basisregistratie Adressen en Gebouwen",
+    "Basisregistratie Grootschalige Topografie",
+    "Basisregistratie Inkomen",
+    "Basisregistratie Kadaster",
+    "Basisregistratie Ondergrond",
+    "Basisregistratie Personen",
+    "Basisregistratie Topografie",
+    "Basisregistratie Voortuigen",
+    "Basisregistratie WOZ",
+    "Handelsregister"
+  ],
+  "high_value": [
+    "Highvalue",
+    "High",
+    "Value"
+  ],
+  "referentie_data": [
+    "Referentiedata",
+    "Referentie"
+  ],
+  "national_coverage": [
+    "Landelijk dekkend",
+    "Dekking",
+    "Nationaal"
+  ],
+  "sector_registrations": [
+    "Sectorregistratie",
+    "Sector",
+    "Registratie"
+  ],
+  "local_registrations": [
+    "Lokaleregistratie",
+    "Lokaal",
+    "Registratie"
+  ]
+}
