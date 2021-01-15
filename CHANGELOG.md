@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.8.0 (2021/01)
+
+- Filter suggestions now have `_filter` appended to their type.
+
+## 0.7.0 (2021/01)
+
+- Add explicit label `in_context_of:self` to suggestions without any context.
+- Always use `sys_uri` as payload for context/filter suggestions (overwriting what is in the suggestion mapping mapped to the `payload` field).
+
 ## 0.6.1 (2020/12)
 
 - Ensured that generated Solr fields are not overwritten during collection synchronization.

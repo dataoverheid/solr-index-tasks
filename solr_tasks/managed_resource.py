@@ -8,26 +8,43 @@ from solr_tasks.lib import utils
 from solr_tasks.lib.solr import SolrCollection, solr_collections
 
 
-def manage_stopwords_nl(collection: SolrCollection) -> None:
-    logging.info('managing stopwords_nl resource')
+def manage_stopwords(collection: SolrCollection, language_code: str) -> None:
+    logging.info('managing stopwords_{0} resource'.format(language_code))
 
-    current_stopwords_nl = collection.select_managed_stopwords('dutch')
+    language_map = {
+        'nl': 'dutch',
+        'en': 'english',
+    }
 
-    logging.info('current stopwords:   %s', len(current_stopwords_nl))
+    language = language_map[language_code] if language_code in language_map \
+        else language_code
 
-    stopwords_nl = list(set(utils.load_resource('stopwords_nl')).difference(
-        current_stopwords_nl
-    ))
+    current_stopwords = collection.select_managed_stopwords(language)
 
-    logging.info('words to add:        %s', len(stopwords_nl))
+    logging.info('current stopwords:   %s', len(current_stopwords))
 
-    if len(stopwords_nl) > 0:
-        if collection.add_managed_stopwords('dutch', stopwords_nl):
-            logging.info('stopwords_nl updated')
+    stopwords = list(set(
+        utils.load_resource('stopwords_{0}'.format(language_code))).
+                        difference(current_stopwords))
+
+    logging.info('words to add:        %s', len(stopwords))
+
+    if len(stopwords) > 0:
+        if collection.add_managed_stopwords(language, stopwords):
+            logging.info('stopwords_{0} updated'.format(language_code))
         else:
-            logging.error('failed to update stopwords_nl resource')
+            logging.error('failed to update stopwords_{0} resource'.
+                          format(language_code))
     else:
         logging.info('no action required')
+
+
+def manage_stopwords_nl(collection: SolrCollection) -> None:
+    manage_stopwords(collection, 'nl')
+
+
+def manage_stopwords_en(collection: SolrCollection) -> None:
+    manage_stopwords(collection, 'en')
 
 
 def manage_uri_synonyms(collection: SolrCollection) -> None:
@@ -94,8 +111,40 @@ def manage_hierarchy_theme(collection: SolrCollection) -> None:
             collection.add_managed_synonyms(hierarchy_item, data_to_add)
 
 
+def manage_label_synonyms(collection: SolrCollection, language_code: str) -> None:
+    logging.info('> managing label resource')
+
+    current_label_synonyms = collection.select_managed_synonyms(
+        'label_{0}'.format(language_code))
+
+    logging.info(' current: %s synonyms', len(current_label_synonyms))
+
+    label_synonyms = utils.load_resource('labels_{0}'.format(language_code))
+
+    synonyms_to_add = {key: value
+                       for key, value in label_synonyms.items()
+                       if key not in current_label_synonyms.keys()}
+
+    logging.info(' adding: %s synonyms', len(synonyms_to_add))
+
+    if len(synonyms_to_add) > 0:
+        collection.add_managed_synonyms(
+            'label_{0}'.format(language_code), synonyms_to_add)
+
+
+def manage_label_synonyms_nl(collection: SolrCollection) -> None:
+    manage_label_synonyms(collection, 'nl')
+
+
+def manage_label_synonyms_en(collection: SolrCollection) -> None:
+    manage_label_synonyms(collection, 'en')
+
+
 def main() -> None:
     resources = {'stopwords_nl': manage_stopwords_nl,
+                 'stopwords_en': manage_stopwords_en,
+                 'labels_nl': manage_label_synonyms_nl,
+                 'labels_en': manage_label_synonyms_en,
                  'uri_synonyms': manage_uri_synonyms,
                  'hierarchy_theme': manage_hierarchy_theme}
 

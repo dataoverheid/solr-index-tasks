@@ -22,6 +22,17 @@ def get_suggestions(search_core: SolrCollection,
     :param mappings: The mappings of the given context
     :return: The list of suggestions
     """
+
+    # For context suggestions search for payload mapping and set it to
+    # sys_uri => payload
+    delete_mappings = [key for key, value in mappings.items()
+                       if 'payload' in value]
+
+    for mapping in delete_mappings:
+        del mappings[mapping]
+
+    mappings['sys_uri'] = ['payload']
+
     dict_mapper = DictMapper(mappings)
     doc_entities = search_core.select_all_documents(
         'sys_type:"{0}"'.format(doc_type),
@@ -49,7 +60,10 @@ def get_suggestions(search_core: SolrCollection,
             mapped_doc_entity.update({
                 'weight': counts[doc_entity['sys_uri']],
                 'in_context_of': in_context,
-                'language': ['nl', 'en']
+                'language': ['nl', 'en'],
+                'type': [suggestion_type + '_filter'
+                         for suggestion_type in mapped_doc_entity['type']]
+                if 'type' in mapped_doc_entity else ['filter']
             })
             suggestions.append(mapped_doc_entity)
 
@@ -93,31 +107,34 @@ def get_theme_suggestions(search_core: SolrCollection, in_context: str) -> list:
     } for theme, count in counts.items()]
 
 
-def get_doc_suggestions(search_core: SolrCollection,
-                        doc_type: str, mappings: dict) -> list:
+def get_doc_suggestions(search_core: SolrCollection, doc_type: str,
+                        mappings: dict, relation_counts: dict) -> list:
     """
     Get suggestions of a given doc_type from the search core
 
     :param SolrCollection search_core: The search core to get suggestions from
     :param str doc_type: The document type to get suggestions for
     :param dict mappings: The mapping from the search core to the suggester core
+    :param dict relation_counts: A dictionary of the relation facet field
     :return: The list of doc suggestions
     """
     dict_mapper = DictMapper(mappings)
     suggestions = []
     entities = search_core.select_all_documents(
         'sys_type:"{0}"'.format(doc_type),
-        list(mappings.keys()),
+        list(mappings.keys()) + ['sys_uri'],
         id_field='sys_id'
     )
 
     for entity in entities:
+        sys_uri = entity['sys_uri']
+
         entity = dict_mapper.apply_map(entity)
 
-        weight = time.mktime(date_parser.parse(entity['weight'][0])
-                             .timetuple()) if 'weight' in entity else 0
-        entity['weight'] = weight
+        entity['weight'] = relation_counts[sys_uri]\
+            if sys_uri in relation_counts else 0
         entity['language'] = ['nl', 'en']
+        entity['in_context_of'] = 'self'
 
         suggestions.append(entity)
 
@@ -135,10 +152,22 @@ def main() -> None:
     logging.info('clearing suggestions')
     suggest.delete_documents('*:*', commit=False)
 
+    relation_counts = search.select_documents({
+        'facet': 'true',
+        'facet.field': 'relation',
+        'f.relation.facet.limit': -1,
+        'rows': 0,
+        'omitHeader': 'true',
+        'q': '*:*',
+        'wt': 'json',
+        'json.nl': 'map',
+        'spellcheck': 'false',
+    })['facet_counts']['facet_fields']['relation']
+
     suggestion_types = utils.load_resource('suggestions')
-    doc_suggestions = {doc_type: get_doc_suggestions(search, doc_type,
-                                                     config['mapping'])
-                       for doc_type, config in suggestion_types.items()}
+    doc_suggestions = {doc_type: get_doc_suggestions(
+        search, doc_type, config['mapping'], relation_counts)
+        for doc_type, config in suggestion_types.items()}
 
     logging.info('adding title suggestions:')
 
