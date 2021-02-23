@@ -1,10 +1,8 @@
 # encoding: utf-8
 
 
-import dateutil.parser as date_parser
 import logging
 import os
-import time
 from solr_tasks.lib import utils
 from solr_tasks.lib.solr import SolrCollection
 from solr_tasks.lib.mapper import DictMapper
@@ -12,7 +10,7 @@ from solr_tasks.lib.mapper import DictMapper
 
 def get_suggestions(search_core: SolrCollection,
                     in_context: str, doc_type: str,
-                    mappings: dict) -> list:
+                    mappings: dict, communities: dict) -> list:
     """
     Get suggestions of a given doc_type in a given context from the search core
 
@@ -20,6 +18,8 @@ def get_suggestions(search_core: SolrCollection,
     :param in_context: The context
     :param doc_type: The doc type
     :param mappings: The mappings of the given context
+    :param dict communities: A dictionary with community URIs as keys and
+    community names as value
     :return: The list of suggestions
     """
 
@@ -56,16 +56,24 @@ def get_suggestions(search_core: SolrCollection,
 
     for doc_entity in doc_entities:
         if doc_entity['sys_uri'] in counts:
-            mapped_doc_entity = dict_mapper.apply_map(doc_entity)
-            mapped_doc_entity.update({
+            entity = dict_mapper.apply_map(doc_entity)
+
+            if 'relation_community' in entity:
+                names = []
+                for community_uri in entity['relation_community']:
+                    if community_uri in communities:
+                        names.append(communities[community_uri])
+                entity['relation_community'] = names
+
+            entity.update({
                 'weight': counts[doc_entity['sys_uri']],
                 'in_context_of': in_context,
                 'language': ['nl', 'en'],
                 'type': [suggestion_type + '_filter'
-                         for suggestion_type in mapped_doc_entity['type']]
-                if 'type' in mapped_doc_entity else ['filter']
+                         for suggestion_type in entity['type']]
+                if 'type' in entity else ['filter']
             })
-            suggestions.append(mapped_doc_entity)
+            suggestions.append(entity)
 
     return suggestions
 
@@ -108,7 +116,8 @@ def get_theme_suggestions(search_core: SolrCollection, in_context: str) -> list:
 
 
 def get_doc_suggestions(search_core: SolrCollection, doc_type: str,
-                        mappings: dict, relation_counts: dict) -> list:
+                        mappings: dict, relation_counts: dict,
+                        communities: dict) -> list:
     """
     Get suggestions of a given doc_type from the search core
 
@@ -116,6 +125,8 @@ def get_doc_suggestions(search_core: SolrCollection, doc_type: str,
     :param str doc_type: The document type to get suggestions for
     :param dict mappings: The mapping from the search core to the suggester core
     :param dict relation_counts: A dictionary of the relation facet field
+    :param dict communities: A dictionary with community URIs as keys and
+    community names as value
     :return: The list of doc suggestions
     """
     dict_mapper = DictMapper(mappings)
@@ -130,6 +141,13 @@ def get_doc_suggestions(search_core: SolrCollection, doc_type: str,
         sys_uri = entity['sys_uri']
 
         entity = dict_mapper.apply_map(entity)
+
+        if 'relation_community' in entity:
+            names = []
+            for community_uri in entity['relation_community']:
+                if community_uri in communities:
+                    names.append(communities[community_uri])
+            entity['relation_community'] = names
 
         entity['weight'] = relation_counts[sys_uri]\
             if sys_uri in relation_counts else 0
@@ -164,9 +182,19 @@ def main() -> None:
         'spellcheck': 'false',
     })['facet_counts']['facet_fields']['relation']
 
+    community_uri_to_name = search.select_all_documents(
+        fq='sys_type:community',
+        fl=['sys_uri', 'sys_name'],
+        id_field='sys_id'
+    )
+
+    community_uri_to_name = {community['sys_uri']: community['sys_name']
+                             for community in community_uri_to_name}
+
     suggestion_types = utils.load_resource('suggestions')
     doc_suggestions = {doc_type: get_doc_suggestions(
-        search, doc_type, config['mapping'], relation_counts)
+        search, doc_type, config['mapping'], relation_counts,
+        community_uri_to_name)
         for doc_type, config in suggestion_types.items()}
 
     logging.info('adding title suggestions:')
@@ -179,7 +207,8 @@ def main() -> None:
     context_suggestions = {
         doc_type: {
             relation: get_suggestions(search, doc_type, relation,
-                                      suggestion_types[relation]['mapping'])
+                                      suggestion_types[relation]['mapping'],
+                                      community_uri_to_name)
         } for doc_type, config in suggestion_types.items()
     for relation in config['relations']}
 

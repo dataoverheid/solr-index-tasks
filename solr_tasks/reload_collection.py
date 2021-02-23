@@ -18,7 +18,7 @@ def main() -> None:
     input_arguments = vars(parser.parse_args())
 
     logging.info('reload_collection.py -- starting')
-    logging.info(' > collection: {0}', input_arguments['collection'])
+    logging.info(' > collection: %s', input_arguments['collection'])
 
     collection = SolrCollection(input_arguments['collection'])
     collection.reload()

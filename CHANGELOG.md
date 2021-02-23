@@ -1,8 +1,21 @@
 # Changelog
 
+## 0.11.0 (2021/02)
+
+- The `generate_relations.py` script now also indexes authority kind (in addition to authority).
+
+## 0.10.0 (2021/01)
+
+- Suggestions are now generated within the context of a specific community. Suggestions can be filtered by including the `sys_name` of the community in the `suggest.cfq`.
+
+## 0.9.0 (2021/01)
+
+- Suggestions now use their relation count (i.e. how many relations a suggestion has with other objects) as suggestions weight.
+
 ## 0.8.0 (2021/01)
 
 - Filter suggestions now have `_filter` appended to their type.
+- Support the `DONL:WOBUitzondering` list for `donl_dataset` to `donl_search` mapping and URI synonym generation.
 
 ## 0.7.0 (2021/01)
 
