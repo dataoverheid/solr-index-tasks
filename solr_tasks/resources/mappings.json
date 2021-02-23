@@ -67,6 +67,9 @@
   "access_rights": [
     "access_rights"
   ],
+  "access_rights_argument": [
+    "url"
+  ],
   "dataset_status": [
     "status"
   ],

@@ -9,6 +9,9 @@
       ],
       "sys_name": [
         "payload"
+      ],
+      "relation_community": [
+        "relation_community"
       ]
     },
     "relations": [
@@ -25,6 +28,9 @@
       ],
       "sys_name": [
         "payload"
+      ],
+      "relation_community": [
+        "relation_community"
       ]
     },
     "relations": []
@@ -39,6 +45,9 @@
       ],
       "sys_name": [
         "payload"
+      ],
+      "relation_community": [
+        "relation_community"
       ]
     },
     "relations": []
@@ -53,6 +62,9 @@
       ],
       "sys_name": [
         "payload"
+      ],
+      "relation_community": [
+        "relation_community"
       ]
     },
     "relations": []
@@ -67,6 +79,9 @@
       ],
       "sys_name": [
         "payload"
+      ],
+      "relation_community": [
+        "relation_community"
       ]
     },
     "relations": []
@@ -81,6 +96,9 @@
       ],
       "sys_name": [
         "payload"
+      ],
+      "relation_community": [
+        "relation_community"
       ]
     },
     "relations": []
@@ -95,6 +113,9 @@
       ],
       "sys_name": [
         "payload"
+      ],
+      "relation_community": [
+        "relation_community"
       ]
     },
     "relations": []
@@ -109,6 +130,9 @@
       ],
       "sys_name": [
         "payload"
+      ],
+      "relation_community": [
+        "relation_community"
       ]
     },
     "relations": []
@@ -137,6 +161,9 @@
       ],
       "sys_name": [
         "payload"
+      ],
+      "relation_community": [
+        "relation_community"
       ]
     },
     "relations": []

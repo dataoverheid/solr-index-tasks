@@ -165,6 +165,35 @@ def update_relations(searcher: SolrCollection) -> None:
     logging.info(' indexed:         %s', len(updates))
 
 
+def update_authority_kind(searcher: SolrCollection) -> None:
+    organization_types = {organization['sys_uri']: organization['kind']
+                     for organization in searcher.select_all_documents(
+            'sys_type:organization', ['sys_uri', 'kind'], id_field='sys_id'
+        ) if 'kind' in organization and 'sys_uri' in organization}
+
+    objects_with_authority = searcher.select_all_documents(
+        'authority:[* TO *]',
+        ['sys_id, authority'],
+        id_field='sys_id'
+    )
+
+    logging.info('Found {0} objects with a relation with an authority')
+
+    updates = [{
+        'sys_id': donl_object['sys_id'],
+        'authority_kind': {
+            'set': [organization_types[authority]
+                    for authority in donl_object['authority']
+                    if authority in organization_types]
+        }
+    } for donl_object in objects_with_authority]
+
+    searcher.index_documents(updates, commit=False)
+
+    logging.info('results')
+    logging.info(' indexed:         %s', len(updates))
+
+
 def main():
     utils.setup_logger(__file__)
 
@@ -177,6 +206,7 @@ def main():
     collection.index_documents([], commit=True)
 
     update_relations(collection)
+    update_authority_kind(collection)
 
     logging.info('committing index changes')
     collection.index_documents([], commit=True)

@@ -32,6 +32,10 @@
       "local": "donl_organization.json",
       "online": "https://waardelijsten.dcat-ap-donl.nl/donl_organization.json"
     },
+    "DONL:WOBUitzondering": {
+      "local": "donl_wobuitzondering.json",
+      "online": "https://waardelijsten.dcat-ap-donl.nl/donl_wobuitzondering.json"
+    },
     "IANA:Mediatypes": {
       "local": "iana_mediatypes.json",
       "online": "https://waardelijsten.dcat-ap-donl.nl/iana_mediatypes.json"
