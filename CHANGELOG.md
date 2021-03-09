@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.11.2 (2021/03)
+
+- Bugfix in `generate_suggestions.py`. When generating suggestions we now use objects with a non-empty `relation` field for setting the weight of suggestions.
+
+## 0.11.1 (2021/02)
+
+- Updated the `donl_dataset` to `donl_search` mapping to accommodate the changes made in `ckanext-dataoverheid@2.5.2`.
+
 ## 0.11.0 (2021/02)
 
 - The `generate_relations.py` script now also indexes authority kind (in addition to authority).

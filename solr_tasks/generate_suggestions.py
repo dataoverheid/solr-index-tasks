@@ -35,11 +35,12 @@ def get_suggestions(search_core: SolrCollection,
 
     dict_mapper = DictMapper(mappings)
     doc_entities = search_core.select_all_documents(
-        'sys_type:"{0}"'.format(doc_type),
+        'sys_type:"{0}" AND sys_uri:[* TO *]'.format(doc_type),
         id_field='sys_id'
     )
     context_entities = search_core.select_all_documents(
-        'sys_type:"{0}"'.format(in_context),
+        'sys_type:"{0}" AND relation:[* TO *]'.format(in_context),
+        ['relation'],
         id_field='sys_id'
     )
 
@@ -55,25 +56,25 @@ def get_suggestions(search_core: SolrCollection,
     suggestions = []
 
     for doc_entity in doc_entities:
-        if doc_entity['sys_uri'] in counts:
-            entity = dict_mapper.apply_map(doc_entity)
+        entity = dict_mapper.apply_map(doc_entity)
 
-            if 'relation_community' in entity:
-                names = []
-                for community_uri in entity['relation_community']:
-                    if community_uri in communities:
-                        names.append(communities[community_uri])
-                entity['relation_community'] = names
+        if 'relation_community' in entity:
+            names = []
+            for community_uri in entity['relation_community']:
+                if community_uri in communities:
+                    names.append(communities[community_uri])
+            entity['relation_community'] = names
 
-            entity.update({
-                'weight': counts[doc_entity['sys_uri']],
-                'in_context_of': in_context,
-                'language': ['nl', 'en'],
-                'type': [suggestion_type + '_filter'
-                         for suggestion_type in entity['type']]
-                if 'type' in entity else ['filter']
-            })
-            suggestions.append(entity)
+        entity.update({
+            'weight': counts[doc_entity['sys_uri']]
+            if doc_entity['sys_uri'] in counts else 0,
+            'in_context_of': in_context,
+            'language': ['nl', 'en'],
+            'type': [suggestion_type + '_filter'
+                     for suggestion_type in entity['type']]
+            if 'type' in entity else ['filter']
+        })
+        suggestions.append(entity)
 
     return suggestions
 
