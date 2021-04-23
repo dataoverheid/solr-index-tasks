@@ -1,8 +1,8 @@
 # IDE
-/.idea/*
+/.idea
 
 # VCS
-/.git/*
+/.git
 /.gitattributes
 /.gitignore
 
