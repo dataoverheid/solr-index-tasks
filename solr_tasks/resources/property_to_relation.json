@@ -1,0 +1,16 @@
+{
+  "organization": {
+    "source": "asset_logo",
+    "to": "asset_authority_logo",
+    "relations": [
+      {
+        "type": "dataset",
+        "match": "authority"
+      },
+      {
+        "type": "datarequest",
+        "match": "authority"
+      }
+    ]
+  }
+}

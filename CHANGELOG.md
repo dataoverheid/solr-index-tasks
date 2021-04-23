@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.13.0 (2021/04)
+
+- Add script `update_relations_with_object_property.py`. This script indexes an object property to its relations according to the mapping in `resources/property_to_relation.json`.
+
+## 0.12.0 (2021/04)
+
+- Several optimizations made to the created Docker image.
+
 ## 0.11.2 (2021/03)
 
 - Bugfix in `generate_suggestions.py`. When generating suggestions we now use objects with a non-empty `relation` field for setting the weight of suggestions.

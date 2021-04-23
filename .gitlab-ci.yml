@@ -5,12 +5,12 @@ stages:
   - publish
 
 
-Docker Image:
+docker image:
   stage: publish
   only:
     - master
   before_script:
     - echo -n $CI_JOB_TOKEN | docker login -u gitlab-ci-token --password-stdin $CI_REGISTRY
   script:
-    - docker build --pull --tag "$CI_REGISTRY_IMAGE:$(cat ./VERSION)" --build-arg PYTHON_VERSION=3.8-alpine --rm ./
-    - docker push "$CI_REGISTRY_IMAGE"
+    - docker build --pull --tag "$CI_REGISTRY_IMAGE:$(cat ./VERSION)" --rm ./
+    - docker push "$CI_REGISTRY_IMAGE:$(cat ./VERSION)"
