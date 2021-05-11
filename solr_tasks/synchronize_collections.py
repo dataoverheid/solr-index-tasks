@@ -68,7 +68,7 @@ def determine_datasets_to_update(delta: bool,
             datasets_to_update[key] = ckan_dataset
             continue
 
-        date_key = mappings['last_modified'][0]
+        date_key = mappings['metadata_modified'][0]
 
         if date_key not in dataset.keys():
             datasets_to_update[key] = ckan_dataset
