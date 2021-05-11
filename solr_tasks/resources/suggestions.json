@@ -50,7 +50,21 @@
         "relation_community"
       ]
     },
-    "relations": []
+    "relations": [],
+    "user_defined_synonyms": {
+      "user_defined_synonyms": [
+        "user_defined_synonym"
+      ],
+      "sys_type": [
+        "type"
+      ],
+      "title": [
+        "payload"
+      ],
+      "relation_community": [
+        "relation_community"
+      ]
+    }
   },
   "datarequest": {
     "mapping": {

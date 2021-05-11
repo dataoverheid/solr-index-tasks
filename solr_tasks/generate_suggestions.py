@@ -118,7 +118,7 @@ def get_theme_suggestions(search_core: SolrCollection, in_context: str) -> list:
 
 def get_doc_suggestions(search_core: SolrCollection, doc_type: str,
                         mappings: dict, relation_counts: dict,
-                        communities: dict) -> list:
+                        communities: dict, fq: str = None) -> list:
     """
     Get suggestions of a given doc_type from the search core
 
@@ -128,12 +128,20 @@ def get_doc_suggestions(search_core: SolrCollection, doc_type: str,
     :param dict relation_counts: A dictionary of the relation facet field
     :param dict communities: A dictionary with community URIs as keys and
     community names as value
+    :param str fq: An optional string used for filtering documents for which
+    suggestions are returned
     :return: The list of doc suggestions
     """
     dict_mapper = DictMapper(mappings)
     suggestions = []
+
+    filter_all_docs = 'sys_type:"{0}"'.format(doc_type)
+
+    if fq is not None:
+        filter_all_docs += ' AND ' + fq
+
     entities = search_core.select_all_documents(
-        'sys_type:"{0}"'.format(doc_type),
+        filter_all_docs,
         list(mappings.keys()) + ['sys_uri'],
         id_field='sys_id'
     )
@@ -203,6 +211,19 @@ def main() -> None:
     for doc_type, doc_type_suggestions in doc_suggestions.items():
         suggest.index_documents(doc_type_suggestions, commit=False)
         logging.info(' titles: %s of type %s',
+                     len(doc_type_suggestions), doc_type)
+
+    user_defined_synonym_suggestions = {doc_type: get_doc_suggestions(
+        search, doc_type, config['user_defined_synonyms'], relation_counts,
+        community_uri_to_name, 'user_defined_synonyms:[* TO *]')
+        for doc_type, config in suggestion_types.items()
+        if 'user_defined_synonyms' in config}
+
+    logging.info('adding user defined synonym suggestions:')
+
+    for doc_type, doc_type_suggestions in user_defined_synonym_suggestions.items():
+        suggest.index_documents(doc_type_suggestions, commit=False)
+        logging.info(' user defined synonyms: %s of type %s',
                      len(doc_type_suggestions), doc_type)
 
     context_suggestions = {
