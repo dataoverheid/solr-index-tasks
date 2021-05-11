@@ -1,8 +1,17 @@
 # Changelog
 
+## 0.14.1 (2021/05)
+
+- The `generate_relations.py` script now commits after each function.
+
+## 0.14.0 (2021/04)
+
+- Updated `generate_suggestions.py` so that it indexes user defined synonym suggestions.
+- Updated `resources/suggestions.json` with an optional key named `user_defined_synonyms` per content type that holds the user defined synonym mapping.
+
 ## 0.13.0 (2021/04)
 
-- Add script `update_relations_with_object_property.py`. This script indexes an object property to its relations according to the mapping in `resources/property_to_relation.json`.
+- Added script `update_relations_with_object_property.py`. This script indexes an object property to its relations according to the mapping in `resources/property_to_relation.json`.
 
 ## 0.12.0 (2021/04)
 

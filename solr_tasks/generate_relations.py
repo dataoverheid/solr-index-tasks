@@ -177,7 +177,9 @@ def update_authority_kind(searcher: SolrCollection) -> None:
         id_field='sys_id'
     )
 
-    logging.info('Found {0} objects with a relation with an authority')
+    logging.info('Found {0} objects with a relation with an authority'.format(
+        len(objects_with_authority)
+    ))
 
     updates = [{
         'sys_id': donl_object['sys_id'],
@@ -206,6 +208,10 @@ def main():
     collection.index_documents([], commit=True)
 
     update_relations(collection)
+
+    logging.info('committing index changes')
+    collection.index_documents([], commit=True)
+
     update_authority_kind(collection)
 
     logging.info('committing index changes')
