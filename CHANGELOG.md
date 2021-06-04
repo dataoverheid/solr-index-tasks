@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.16.0 (2021/05)
+
+- Add user defined synonyms of organizations to organization suggestions.
+
+## 0.15.0 (2021/05)
+
+- Add index of dataschema.
+
 ## 0.14.1 (2021/05)
 
 - The `generate_relations.py` script now commits after each function.
