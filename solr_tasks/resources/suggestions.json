@@ -40,6 +40,9 @@
       "title": [
         "organization"
       ],
+      "user_defined_synonyms": [
+        "organization"
+      ],
       "sys_type": [
         "type"
       ],

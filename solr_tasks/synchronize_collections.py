@@ -8,6 +8,33 @@ import dateutil.parser as date_parser
 from solr_tasks.lib import utils
 from solr_tasks.lib.mapper import DictMapper
 from solr_tasks.lib.solr import SolrCollection
+import json
+
+
+def get_dataschema_fields(resource_descriptions: list) -> dict:
+    dataschema_fields = {
+        'dataschema_name': [],
+        'dataschema_code': [],
+        'dataschema_type': [],
+        'dataschema_description': [],
+    }
+
+    for description in resource_descriptions:
+        try:
+            dataschema_json = json.loads(description)
+
+            for row in dataschema_json:
+                dataschema_fields['dataschema_name'].append(row['name'])
+                dataschema_fields['dataschema_code'].append(row['code'])
+                dataschema_fields['dataschema_type'].append(row['type'])
+                dataschema_fields['dataschema_description'].append(
+                    row['description'])
+
+            break
+        except ValueError:
+            continue
+
+    return dataschema_fields
 
 
 def determine_dataset_mutations(solr_dataset: SolrCollection,
@@ -26,6 +53,18 @@ def determine_dataset_mutations(solr_dataset: SolrCollection,
     mapper = DictMapper(mappings, {'sys_type': 'dataset'})
     ckan_datasets = {dataset['id']: mapper.apply_map(dataset)
                      for dataset in ckan_datasets}
+
+    # Get dataschema fields from resource description
+    for dataset_id in ckan_datasets.keys():
+        try:
+            ckan_datasets[dataset_id].update(
+                get_dataschema_fields(
+                    ckan_datasets[dataset_id].pop('res_description')
+                )
+            )
+        except KeyError:
+            continue
+
     solr_datasets = {dataset['sys_id']: dataset for dataset in solr_datasets}
 
     logging.info('datasets mapped to search schema')
