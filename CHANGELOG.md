@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.16.1 (2021/05)
+
+- Set more lenient permissions for the `./lists` directory in the Docker image. The old behaviour prevented other users from having read access to the directory itself causing permissions issues when mounting the lists directory as a volume in other containers.
+
 ## 0.16.0 (2021/05)
 
 - Add user defined synonyms of organizations to organization suggestions.
