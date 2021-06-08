@@ -24,7 +24,8 @@ RUN pip install --no-cache-dir --editable ./ && \
     mkdir -p ${PROJECT_ROOT}/log && \
     useradd -r index-tasks && \
     chown -R index-tasks:index-tasks ${PROJECT_ROOT} && \
-    chmod -R o-rwx ${PROJECT_ROOT}
+    chmod -R o-rwx ${PROJECT_ROOT} && \
+    chmod -R ugo+rx ${PROJECT_ROOT}/lists
 
 USER index-tasks
 
