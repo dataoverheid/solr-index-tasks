@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.17.0 (2021/08)
+
+- Add `get_facet_counts` to `SolrCollection` that returns a map <field-value, count> of a given field's counts.
+- Update `popularity` index, based on the number of relations of an object, in `generate_relations.py`.
+
+## 0.16.4 (2021/07)
+
+- Exclude filter suggestions that lead to a empty resultset.
+
+## 0.16.3 (2021/06)
+
+- Map res_description to text directly while synchronizing `donl_dataset` and `donl_search`.
+- Map distribution type while synchronizing `donl_dataset` and `donl_search`.
+- Index suggestions that have at least 1 relation only.
+
+## 0.16.2 (2021/06)
+
+- Fixed a bug that prevented all but the first DataSchema distribution from being indexed in the `donl_search` collection when running the `solr_tasks/synchronize_collections.py` task.
+
 ## 0.16.1 (2021/05)
 
 - Set more lenient permissions for the `./lists` directory in the Docker image. The old behaviour prevented other users from having read access to the directory itself causing permissions issues when mounting the lists directory as a volume in other containers.

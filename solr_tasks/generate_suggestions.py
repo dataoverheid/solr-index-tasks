@@ -65,6 +65,9 @@ def get_suggestions(search_core: SolrCollection,
                     names.append(communities[community_uri])
             entity['relation_community'] = names
 
+        if doc_entity['sys_uri'] not in counts:
+            continue
+        
         entity.update({
             'weight': counts[doc_entity['sys_uri']]
             if doc_entity['sys_uri'] in counts else 0,
@@ -149,6 +152,9 @@ def get_doc_suggestions(search_core: SolrCollection, doc_type: str,
     for entity in entities:
         sys_uri = entity['sys_uri']
 
+        if sys_uri not in relation_counts:
+            continue
+
         entity = dict_mapper.apply_map(entity)
 
         if 'relation_community' in entity:
@@ -158,8 +164,7 @@ def get_doc_suggestions(search_core: SolrCollection, doc_type: str,
                     names.append(communities[community_uri])
             entity['relation_community'] = names
 
-        entity['weight'] = relation_counts[sys_uri]\
-            if sys_uri in relation_counts else 0
+        entity['weight'] = relation_counts[sys_uri]
         entity['language'] = ['nl', 'en']
         entity['in_context_of'] = 'self'
 
@@ -179,17 +184,7 @@ def main() -> None:
     logging.info('clearing suggestions')
     suggest.delete_documents('*:*', commit=False)
 
-    relation_counts = search.select_documents({
-        'facet': 'true',
-        'facet.field': 'relation',
-        'f.relation.facet.limit': -1,
-        'rows': 0,
-        'omitHeader': 'true',
-        'q': '*:*',
-        'wt': 'json',
-        'json.nl': 'map',
-        'spellcheck': 'false',
-    })['facet_counts']['facet_fields']['relation']
+    relation_counts = search.get_facet_counts('relation')
 
     community_uri_to_name = search.select_all_documents(
         fq='sys_type:community',
