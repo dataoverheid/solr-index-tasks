@@ -14,7 +14,7 @@
   "metadata_created": [
     "sys_created"
   ],
-  "metadata_modified": [
+  "last_modified": [
     "sys_modified"
   ],
   "identifier": [
@@ -194,6 +194,10 @@
     "text"
   ],
   "res_description": [
-    "res_description"
+    "res_description",
+    "text"
+  ],
+  "res_extras_distribution_type": [
+    "distribution_type"
   ]
 }

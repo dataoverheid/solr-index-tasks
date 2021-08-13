@@ -196,6 +196,31 @@ def update_authority_kind(searcher: SolrCollection) -> None:
     logging.info(' indexed:         %s', len(updates))
 
 
+def update_popularity(searcher: SolrCollection) -> None:
+    logging.info('Updating popularity')
+    relation_counts = searcher.get_facet_counts('relation')
+
+    donl_objects = searcher.select_all_documents(
+        fl=['sys_uri', 'popularity'],
+        id_field='sys_id'
+    )
+
+    updates = [{
+        'sys_id': donl_object['sys_id'],
+        'popularity': {
+            'set': relation_counts[donl_object['sys_uri']]
+        }
+    } for donl_object in donl_objects
+    if donl_object['sys_uri'] in relation_counts
+    and not ('popularity' in donl_object
+    and donl_object['popularity'] == relation_counts[donl_object['sys_uri']])]
+
+    searcher.index_documents(updates, commit=False)
+
+    logging.info('results')
+    logging.info(' indexed:         %s', len(updates))
+
+
 def main():
     utils.setup_logger(__file__)
 
@@ -213,6 +238,11 @@ def main():
     collection.index_documents([], commit=True)
 
     update_authority_kind(collection)
+
+    logging.info('committing index changes')
+    collection.index_documents([], commit=True)
+
+    update_popularity(collection)
 
     logging.info('committing index changes')
     collection.index_documents([], commit=True)

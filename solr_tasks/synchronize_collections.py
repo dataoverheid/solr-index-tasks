@@ -29,8 +29,6 @@ def get_dataschema_fields(resource_descriptions: list) -> dict:
                 dataschema_fields['dataschema_type'].append(row['type'])
                 dataschema_fields['dataschema_description'].append(
                     row['description'])
-
-            break
         except ValueError:
             continue
 
@@ -107,7 +105,7 @@ def determine_datasets_to_update(delta: bool,
             datasets_to_update[key] = ckan_dataset
             continue
 
-        date_key = mappings['metadata_modified'][0]
+        date_key = mappings['last_modified'][0]
 
         if date_key not in dataset.keys():
             datasets_to_update[key] = ckan_dataset

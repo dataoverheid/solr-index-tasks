@@ -59,6 +59,19 @@ class SolrCollection:
         self.request_session = setup_request_session()
         self.request_session.auth = solr_auth()
 
+    def get_facet_counts(self, field: str) -> dict:
+        return self.select_documents({
+            'facet': 'true',
+            'facet.field': field,
+            'f.{0}.facet.limit'.format(field): -1,
+            'rows': 0,
+            'omitHeader': 'true',
+            'q': '*:*',
+            'wt': 'json',
+            'json.nl': 'map',
+            'spellcheck': 'false',
+        })['facet_counts']['facet_fields'][field]
+
     def document_count(self,
                        selector: str = '*:*') -> Union[int, None]:
         """
