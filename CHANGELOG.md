@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.17.2 (2022/03)
+
+- Delete documents in chunks, so that large delete requests do not result in an error.
+
+## 0.17.1 (2021/08)
+
+- Explicitly interpret the `HTTP_RETRY` environment variable as an integer.
+
 ## 0.17.0 (2021/08)
 
 - Add `get_facet_counts` to `SolrCollection` that returns a map <field-value, count> of a given field's counts.
