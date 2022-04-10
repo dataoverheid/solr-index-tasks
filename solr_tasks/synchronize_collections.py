@@ -256,10 +256,15 @@ def main() -> None:
     search_collection.index_documents(datasets_to_update, commit=False)
     logging.info(' updated: %s', len(datasets_to_update))
 
-    delete_query = ' OR '.join(['sys_id:"{0}"'.format(sys_id)
-                                for sys_id in list(mutations['delete'].keys())])
-    if delete_query:
-        search_collection.delete_documents(delete_query, commit=False)
+    delete_queries = ['sys_id:"{0}"'.format(sys_id)
+                      for sys_id in list(mutations['delete'].keys())]
+
+    chunk_size = 500
+    chunks = [delete_queries[i:i + chunk_size]
+              for i in range(0, len(delete_queries), chunk_size)]
+
+    for chunk in chunks:
+        search_collection.delete_documents(' OR '.join(chunk), commit=False)
 
     logging.info(' deleted: %s', len(mutations['delete']))
 

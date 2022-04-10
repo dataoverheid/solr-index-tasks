@@ -123,7 +123,7 @@ def _set_request_retry_policy(session: requests.Session) -> requests.Session:
     :param requests.Session session: The session object to update
     :rtype requests.Session:
     """
-    retry_policy = Retry(total=os.getenv('HTTP_RETRY', 3))
+    retry_policy = Retry(total=int(os.getenv('HTTP_RETRY', 3)))
 
     for protocol in ['http://', 'https://']:
         session.mount(protocol, HTTPAdapter(max_retries=retry_policy))
