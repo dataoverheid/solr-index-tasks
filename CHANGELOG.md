@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.17.3 (2022/05)
+
+- Use `metadata_modified` instead of `last_modified` for modified date of datasets. In newer CKAN releases this should be reverted.
+
 ## 0.17.2 (2022/03)
 
 - Delete documents in chunks, so that large delete requests do not result in an error.
